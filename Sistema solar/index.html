@@ -14,19 +14,115 @@
 <!-- Escena -->
 <a-scene>
   <!-- Camera -->
-  <a-entity camera="userHeight: 1.75;" jump-ability kinematic-body universal-controls look-controls="pointerLockEnabled: true;" position="0 1.6 1"></a-entity>
+  <a-entity camera="userHeight: 1.75;" jump-ability kinematic-body universal-controls look-controls="pointerLockEnabled: true;" position="0 1.75w 20"></a-entity>
   
   <!-- Cielo -->
-  <a-sky color="lightblue"></a-sky>
+  <a-sky src="https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/0.V%C3%ADa%20L%C3%A1ctea.webp"></a-sky>
   
   <!-- Suelo -->
-  <a-box      static-body  position="0 -0.5 0"   height="1" width="100" color="gray" depth="100" ></a-box>
+  <a-box
+    static-body
+    position="0 0 0"
+    height="1"
+    width="200"
+    color="gray"
+    depth="100"
+    material="opacity: 0.25;"
+  ></a-box>
   
   <!-- Contenido -->
-  <a-sphere   dynamic-body position="0 1.25 -5"  radius="1.25" color="#EF2D5E"></a-sphere>
-  <a-box      static-body  position="-1 0.5 -3"  height="1" width="1" rotation="0 45 0" depth="1" color="#4CC3D9"></a-box>
-  <a-cylinder static-body  position="1 0.75 -3"  height="1.5" radius="0.5"  color="#FFC65D"></a-cylinder>
-  <a-plane    static-body  position="0 0.02 -4" height="4" width="4" rotation="-90 0 0"   color="#7BC8A4"></a-plane>
+  <!-- Sol -->
+  <a-sphere
+    material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/1.Sol.webp"
+    
+    static-body
+    position="0 0.5 0"
+    radius="5"
+  ></a-sphere>
+  
+  <!-- Mercurio -->
+  <a-sphere
+    material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/2.Mercurio.webp"
+    
+    static-body
+    position="10 0.5 0"
+    radius="2"
+  ></a-sphere>
+  
+  <!-- Venus -->
+  <a-sphere
+    material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/3.Venus.webp"
+    
+    static-body
+    position="20 0.5 0"
+    radius="2"
+  ></a-sphere>
+
+  <!-- Tierra -->
+  <a-sphere
+    material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/4.Tierra.webp"
+    
+    static-body
+    position="30 0.5 0"
+    radius="2"
+  ></a-sphere>
+  
+  <!-- Marte -->
+  <a-sphere
+    material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/5.Marte.webp"
+    
+    static-body
+    position="40 0.5 0"
+    radius="2"
+  ></a-sphere>
+  
+  <!-- Jupiter -->
+  <a-sphere
+    material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/6.J%C3%BApiter.webp"
+    
+    static-body
+    position="50 0.5 0"
+    radius="2"
+  ></a-sphere>
+  
+  <!-- Saturno -->
+  <a-sphere
+    material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/7.Saturno.webp"
+    
+    static-body
+    position="60 0.5 0"
+    radius="2"
+  >
+    <a-circle
+        src="https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/7.Saturno%20Anillo.webp"
+        radius="3"
+        rotation="-90 0 0"
+    ></a-circle>
+  </a-sphere>
+  
+  <!-- Urano -->
+  <a-sphere
+    material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/9.Urano.webp"
+    
+    static-body
+    position="70 0.5 0"
+    radius="2"
+  >
+    <a-circle
+        src="https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/8.Urano%20Anillo.webp"
+        radius="3"
+        rotation="-90 0 0"
+    ></a-circle>
+  </a-sphere>
+  
+  <!-- Neptuno -->
+  <a-sphere
+    material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/10.Neptuno.webp"
+    
+    static-body
+    position="80 0.5 0"
+    radius="2"
+  ></a-sphere>
   
 </a-scene>
 
