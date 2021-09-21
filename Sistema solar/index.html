@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>HTML Tutorial</title>
+<head>
+  <!-- A-Frame 1.1.0 -->
+  <script src="//aframe.io/releases/1.1.0/aframe.min.js"></script>
+  <!-- A-Frame Extras Para saltar y fisicas
+  https://unpkg.com/browse/aframe-extras@3.13.1/
+  -->
+  <script src="//unpkg.com/aframe-extras@3.13.1/dist/aframe-extras.min.js"></script>
+<head>
+<body>
+
+<!-- Escena -->
+<a-scene>
+  <!-- Camera -->
+  <a-entity camera="userHeight: 1.75;" jump-ability kinematic-body universal-controls look-controls="pointerLockEnabled: true;" position="0 1.6 1"></a-entity>
+  
+  <!-- Cielo -->
+  <a-sky color="lightblue"></a-sky>
+  
+  <!-- Suelo -->
+  <a-box      static-body  position="0 -0.5 0"   height="1" width="100" color="gray" depth="100" ></a-box>
+  
+  <!-- Contenido -->
+  <a-sphere   dynamic-body position="0 1.25 -5"  radius="1.25" color="#EF2D5E"></a-sphere>
+  <a-box      static-body  position="-1 0.5 -3"  height="1" width="1" rotation="0 45 0" depth="1" color="#4CC3D9"></a-box>
+  <a-cylinder static-body  position="1 0.75 -3"  height="1.5" radius="0.5"  color="#FFC65D"></a-cylinder>
+  <a-plane    static-body  position="0 0.02 -4" height="4" width="4" rotation="-90 0 0"   color="#7BC8A4"></a-plane>
+  
+</a-scene>
+
+</body>
+</html>
