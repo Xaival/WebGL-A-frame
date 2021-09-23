@@ -5,7 +5,7 @@ Proyectos de paginas web con A-frame
 ![image](https://user-images.githubusercontent.com/54257745/134513933-aa055b83-a6f1-4f96-82cf-9e5b77517a2a.png)
 
 |                     |Sol        |Mercurio      |Venus          |Tierra         |Luna        |Marte          |Jupiter        |Saturno          |Anillo     |Urano            |Anillo     |Neptuno          |
-| :---:               |:---:      |:---:         |:---:          |:---:          |:---:       |:---:          |:---:          |:---:            |:---:      |:---:            |:---:      |:---:            |
+| |:---:              |:---:      |:---:         |:---:          |:---:          |:---:       |:---:          |:---:          |:---:            |:---:      |:---:            |:---:      |:---:            |
 | Distancia maxima    |0 Km       |69.800.000 Km |108.900.000 Km |152.100.000 Km |405.696 Km  |249.100.000 Km |815.700.000 Km |1.503.000.000 Km |0 Km       |3.003.000.000 Km |0 Km       |4.546.000.000 Km |
 | Distancia minima    |0 Km       |46.000.000 Km |107.500.000 Km |147.100.000 Km |363.104 Km  |206.700.000 Km |740.900.000 Km |1.348.000.000 Km |0 Km       |2.739.000.000 Km |0 Km       |4.456.000.000 Km |
 | Inclinacion Orbital |0 Km       |7°            |3,394°         |0°             |5°          |1,850°         |1,303°         |2,489°           |0          |0,773°           |0          |1,770°           |
