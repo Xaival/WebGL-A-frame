@@ -52,7 +52,7 @@
 	></a-sphere>
 
 	<!-- Mercurio -->
-	<a-entity position="1.85 0 0"
+	<a-entity rotation="7 0 0"><a-entity position="1.85 0 0"
 	animation="property: rotation; to: 0 360 0; dur: 87969; easing: linear; loop: true"
 	animation__2="property: position; to: -1.85 0 0; dur: 43984.5; easing: linear; dir: alternate; loop: true">
 		<a-entity position="145.51 0 0" rotation="0 0 0.01">
@@ -65,10 +65,10 @@
 			shadow="cast: true;"
 			></a-sphere>
 		</a-entity>
-	</a-entity>
+	</a-entity></a-entity>
 
 	<!-- Venus -->
-	<a-entity position="0.11 0 0"
+	<a-entity rotation="3.394 0 0"><a-entity position="0.11 0 0"
 	animation="property: rotation; to: 0 360 0; dur: 224700; easing: linear; loop: true"
 	animation__2="property: position; to: -0.11 0 0; dur: 112350; easing: linear; dir: alternate; loop: true">
 		<a-entity position="150.28 0 0" rotation="0 0 177.3">
@@ -81,13 +81,14 @@
 			shadow="cast: true;"
 			></a-sphere>
 		</a-entity>
-	</a-entity>
+	</a-entity></a-entity>
 
 	<!-- Tierra -->
-	<a-entity position="0.39 0 0"
+  <a-entity position="0.39 0 0"
 	animation="property: rotation; to: 0 360 0; dur: 365256; easing: linear; loop: true"
 	animation__2="property: position; to: -0.39 0 0; dur: 182628; easing: linear; dir: alternate; loop: true">
-		<a-entity position="153.36 0 0" rotation="0 0 23.26">
+		<a-entity position="153.36 0 0" rotation="0 0 23.26"
+		animation="property: rotation; to: 0 -23.26 0; dur: 182500; easing: linear; dir: alternate; loop: true">
 			<a-sphere
 			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/4.Tierra.webp; roughness: 50;"
 
@@ -96,12 +97,16 @@
 			radius="1.30"
 			shadow="cast: true;"
 			></a-sphere>
+		</a-entity>
+		<a-entity position="153.36 0 0"
+		animation="property: rotation; to: 0 360 0; dur: 28000; easing: linear; loop: true">
 			<a-sphere
 			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/4.Tierra%20Luna.webp; roughness: 50;"
-
+      
+			animation="property: rotation; to: 0 360 88.3; dur: 28000; easing: linear; loop: true"
 			static-body
 			position="1.75 0 0"
-			rotation="0 0 88.3"
+			rotation="0 180 0"
 			radius="0.35"
 			shadow="cast: true;"
 			></a-sphere>
@@ -109,7 +114,7 @@
 	</a-entity>
 
 	<!-- Marte -->
-	<a-entity position="3.29 0 0"
+	<a-entity rotation="1.85 0 0"><a-entity position="3.29 0 0"
 	animation="property: rotation; to: 0 360 0; dur: 686199; easing: linear; loop: true"
 	animation__2="property: position; to: -3.29 0 0; dur: 343099.5; easing: linear; dir: alternate; loop: true">
 		<a-entity position="157.98 0 0" rotation="0 0 25.19">
@@ -122,10 +127,10 @@
 			shadow="cast: true;"
 			></a-sphere>
 		</a-entity>
-	</a-entity>
+	</a-entity></a-entity>
 
 	<!-- Jupiter -->
-	<a-entity position="5.81 0 0"
+	<a-entity rotation="1.303 0 0"><a-entity position="5.81 0 0"
 	animation="property: rotation; to: 0 360 0; dur: 4328900; easing: linear; loop: true"
 	animation__2="property: position; to: -5.81 0 0; dur: 2164450; easing: linear; dir: alternate; loop: true">
 		<a-entity position="199.46 0 0" rotation="0 0 3.13">
@@ -138,10 +143,10 @@
 			shadow="cast: true;"
 			></a-sphere>
 		</a-entity>
-	</a-entity>
+	</a-entity></a-entity>
 
 	<!-- Saturno -->
-	<a-entity position="12.04 0 0"
+	<a-entity rotation="2.489 0 0"><a-entity position="12.04 0 0"
 	animation="property: rotation; to: 0 360 0; dur: 10738300; easing: linear; loop: true"
 	animation__2="property: position; to: -12.04 0 0; dur: 5369150; easing: linear; dir: alternate; loop: true">
 		<a-entity position="246.60 0 0" rotation="0 0 -26.73">
@@ -172,10 +177,10 @@
 			shadow="cast: true;"
 			></a-ring>
 		</a-entity>
-	</a-entity>
+	</a-entity></a-entity>
 
 	<!-- Urano -->
-	<a-entity position="20.50 0 0"
+	<a-entity rotation="0.773 0 0"><a-entity position="20.50 0 0"
 	animation="property: rotation; to: 0 360 0; dur: 30568750; easing: linear; loop: true"
 	animation__2="property: position; to: -20.50 0 0; dur: 15284375; easing: linear; dir: alternate; loop: true">
 		<a-entity position="354.61 0 0" rotation="0 0 97.77">
@@ -206,10 +211,10 @@
 			shadow="cast: true;"
 			></a-ring>
 		</a-entity>
-	</a-entity>
+	</a-entity></a-entity>
 
 	<!-- Neptuno -->
-	<a-entity position="6.99 0 0"
+	<a-entity rotation="1.77 0 0"><a-entity position="6.99 0 0"
 	animation="property: rotation; to: 0 360 0; dur: 59757800; easing: linear; loop: true"
 	animation__2="property: position; to: -6.99 0 0; dur: 29878900; easing: linear; dir: alternate; loop: true">
 		<a-entity position="501 0 0" rotation="0 0 28.32">
@@ -222,9 +227,9 @@
 			shadow="cast: true;"
 			></a-sphere>
 		</a-entity>
-	</a-entity>
+	</a-entity></a-entity>
 
 </a-scene>
-
+	
 </body>
 </html>
