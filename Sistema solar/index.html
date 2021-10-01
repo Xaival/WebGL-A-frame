@@ -1,235 +1,283 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>WebGL Sistema solar con A-frame</title>
-  <!-- A-Frame 1.1.0
-  https://aframe.io/releases/1.1.0/aframe.min.js
-  -->
-  <script src="./Scripts/aframe-v1.1.0.min.js"></script>
-  <!-- A-Frame Extras Para saltar y fisicas
-  https://unpkg.com/browse/aframe-extras@3.13.1/dist/aframe-extras.min.js
-  -->
-  <script src="./Scripts/aframe-extras-v3.13.1.min.js"></script>
+	<title>WebGL Sistema solar con A-frame</title>
+	
+	<!-- A-Frame 1.1.0
+	https://aframe.io/releases/1.1.0/aframe.min.js
+	-->
+	<script src="./Scripts/aframe-v1.1.0.min.js"></script>
+	<!-- A-Frame Extras Para saltar y fisicas
+	https://unpkg.com/browse/aframe-extras@3.13.1/dist/aframe-extras.min.js
+	-->
+	<script src="./Scripts/aframe-extras-v3.13.1.min.js"></script>
 <head>
 <body>
+	<!-- A-Frame 1.1.0 -->
+	<script src="//aframe.io/releases/1.1.0/aframe.min.js"></script>
+	<!-- A-Frame Extras Para saltar y fisicas
+	https://unpkg.com/browse/aframe-extras@3.13.1/
+	-->
+	<script src="//unpkg.com/aframe-extras@3.13.1/dist/aframe-extras.min.js"></script>
 
-<!-- Escena -->
-<a-scene>
-	<!-- Camera -->
-	<a-entity
-		camera="userHeight: 1.75;"
-		jump-ability kinematic-body
-		universal-controls="acceleration:500;"
-		look-controls="pointerLockEnabled: true;"
-		position="141.94 1.25 75"
-	></a-entity>
+	<!-- Escena -->
+	<a-scene>
+		<!-- Camera -->
+		<a-entity
+			camera="userHeight: 1.75;"
+			jump-ability kinematic-body
+			universal-controls="acceleration:500;"
+			look-controls="pointerLockEnabled: true;"
+			position="141.94 1.25 75"
+		></a-entity>
 
-	<!-- Cielo -->
-	<a-sky src="https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/0.V%C3%ADa%20L%C3%A1ctea.webp" radius="10000"></a-sky>
+		<!-- Cielo -->
+		<a-sky src="https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/0.V%C3%ADa%20L%C3%A1ctea.webp" radius="10000"></a-sky>
 
-	<!-- Suelo -->
-	<a-box
-		static-body
-		position="0 -0.25 0"
-		height="1"
-		width="10000"
-		depth="10000"
-
-		color="gray"
-		material="visible:false;"
-	></a-box>
-
-	<!-- Contenido -->
-	<!-- Sol -->
-	<a-sphere
-		material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/1.Sol.webp; metalness: 0; roughness: 100;"
-
-		static-body
-		position="0 0 0"
-		radius="141.94"
-		light="type: point; color: #FFF; distance: 1000; intensity: 2; castShadow: true;"
-		shader="flat"
-	></a-sphere>
-
-	<!-- Mercurio -->
-	<a-entity rotation="7 0 0"><a-entity position="1.85 0 0"
-	animation="property: rotation; to: 0 360 0; dur: 87969; easing: linear; loop: true"
-	animation__2="property: position; to: -1.85 0 0; dur: 43984.5; easing: linear; dir: alternate; loop: true">
-		<a-entity position="145.51 0 0" rotation="0 0 0.01">
-			<a-sphere
-			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/2.Mercurio.webp; roughness: 50;"
-
-			animation="property: rotation; to: 0 360 0; dur: 58646; easing: linear; loop: true"
+		<!-- Suelo -->
+		<a-box
 			static-body
-			radius="0.50"
-			shadow="cast: true;"
-			></a-sphere>
+			position="0 -0.25 0"
+			height="1"
+			width="1500"
+			depth="1500"
+
+			color="gray"
+			material="visible:false;"
+		></a-box>
+		
+		<!-- Pared -->
+		<a-box
+			static-body
+			position="750 25 0"
+			height="100"
+			width="1"
+			depth="1500"
+
+			color="gray"
+			material="visible:false;"
+		></a-box>
+		<a-box
+			static-body
+			position="-750 25 0"
+			height="100"
+			width="1"
+			depth="1500"
+
+			color="gray"
+			material="visible:false;"
+		></a-box>
+		<a-box
+			static-body
+			position="0 25 750"
+			height="100"
+			width="1500"
+			depth="1"
+
+			color="gray"
+			material="visible:false;"
+		></a-box>
+		<a-box
+			static-body
+			position="0 25 -750"
+			height="100"
+			width="1500"
+			depth="1"
+
+			color="gray"
+			material="visible:false;"
+		></a-box>
+
+		<!-- Contenido -->
+		<!-- Sol -->
+		<a-sphere
+			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/1.Sol.webp; metalness: 0; roughness: 100;"
+
+			static-body
+			position="0 0 0"
+			radius="141.94"
+			light="type: point; color: #FFF; distance: 1000; intensity: 2; castShadow: true;"
+			shader="flat"
+		></a-sphere>
+
+		<!-- Mercurio -->
+		<a-entity rotation="7 0 0"><a-entity position="1.85 0 0"
+		animation="property: rotation; to: 0 360 0; dur: 87969; easing: linear; loop: true"
+		animation__2="property: position; to: -1.85 0 0; dur: 43984.5; easing: linear; dir: alternate; loop: true">
+			<a-entity position="145.51 0 0" rotation="0 0 0.01">
+				<a-sphere
+				material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/2.Mercurio.webp; roughness: 50;"
+
+				animation="property: rotation; to: 0 360 0; dur: 58646; easing: linear; loop: true"
+				static-body
+				radius="0.50"
+				shadow="cast: true;"
+				></a-sphere>
+			</a-entity>
+		</a-entity></a-entity>
+
+		<!-- Venus -->
+		<a-entity rotation="3.394 0 0"><a-entity position="0.11 0 0"
+		animation="property: rotation; to: 0 360 0; dur: 224700; easing: linear; loop: true"
+		animation__2="property: position; to: -0.11 0 0; dur: 112350; easing: linear; dir: alternate; loop: true">
+			<a-entity position="150.28 0 0" rotation="0 0 177.3">
+				<a-sphere
+				material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/3.Venus.webp; roughness: 50;"
+
+				animation="property: rotation; to: 0 360 0; dur: 243010; easing: linear; loop: true"
+				static-body
+				radius="1.23"
+				shadow="cast: true;"
+				></a-sphere>
+			</a-entity>
+		</a-entity></a-entity>
+
+		<!-- Tierra -->
+		<a-entity position="0.39 0 0"
+		animation="property: rotation; to: 0 360 0; dur: 365256; easing: linear; loop: true"
+		animation__2="property: position; to: -0.39 0 0; dur: 182628; easing: linear; dir: alternate; loop: true">
+			<a-entity position="153.36 0 0" rotation="0 0 23.26"
+			animation="property: rotation; to: 0 -23.26 0; dur: 182500; easing: linear; dir: alternate; loop: true">
+				<a-sphere
+				material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/4.Tierra.webp; roughness: 50;"
+
+				animation="property: rotation; to: 0 360 0; dur: 997; easing: linear; loop: true"
+				static-body
+				radius="1.30"
+				shadow="cast: true;"
+				></a-sphere>
+			</a-entity>
+			<a-entity position="153.36 0 0"
+				animation="property: rotation; to: 0 360 0; dur: 28000; easing: linear; loop: true">
+				<a-sphere
+				material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/4.Tierra%20Luna.webp; roughness: 50;"
+
+				animation="property: rotation; to: 0 360 88.3; dur: 28000; easing: linear; loop: true"
+				static-body
+				position="1.75 0 0"
+				rotation="0 180 0"
+				radius="0.35"
+				shadow="cast: true;"
+				></a-sphere>
+			</a-entity>
 		</a-entity>
-	</a-entity></a-entity>
 
-	<!-- Venus -->
-	<a-entity rotation="3.394 0 0"><a-entity position="0.11 0 0"
-	animation="property: rotation; to: 0 360 0; dur: 224700; easing: linear; loop: true"
-	animation__2="property: position; to: -0.11 0 0; dur: 112350; easing: linear; dir: alternate; loop: true">
-		<a-entity position="150.28 0 0" rotation="0 0 177.3">
-			<a-sphere
-			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/3.Venus.webp; roughness: 50;"
+		<!-- Marte -->
+		<a-entity rotation="1.85 0 0"><a-entity position="3.29 0 0"
+		animation="property: rotation; to: 0 360 0; dur: 686199; easing: linear; loop: true"
+		animation__2="property: position; to: -3.29 0 0; dur: 343099.5; easing: linear; dir: alternate; loop: true">
+			<a-entity position="157.98 0 0" rotation="0 0 25.19">
+				<a-sphere
+				material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/5.Marte.webp; roughness: 50;"
 
-			animation="property: rotation; to: 0 360 0; dur: 243010; easing: linear; loop: true"
-			static-body
-			radius="1.23"
-			shadow="cast: true;"
-			></a-sphere>
-		</a-entity>
-	</a-entity></a-entity>
+				animation="property: rotation; to: 0 360 0; dur: 1025; easing: linear; loop: true"
+				static-body
+				radius="0.69"
+				shadow="cast: true;"
+				></a-sphere>
+			</a-entity>
+		</a-entity></a-entity>
 
-	<!-- Tierra -->
-  <a-entity position="0.39 0 0"
-	animation="property: rotation; to: 0 360 0; dur: 365256; easing: linear; loop: true"
-	animation__2="property: position; to: -0.39 0 0; dur: 182628; easing: linear; dir: alternate; loop: true">
-		<a-entity position="153.36 0 0" rotation="0 0 23.26"
-		animation="property: rotation; to: 0 -23.26 0; dur: 182500; easing: linear; dir: alternate; loop: true">
-			<a-sphere
-			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/4.Tierra.webp; roughness: 50;"
+		<!-- Jupiter -->
+		<a-entity rotation="1.303 0 0"><a-entity position="5.81 0 0"
+		animation="property: rotation; to: 0 360 0; dur: 4328900; easing: linear; loop: true"
+		animation__2="property: position; to: -5.81 0 0; dur: 2164450; easing: linear; dir: alternate; loop: true">
+			<a-entity position="199.46 0 0" rotation="0 0 3.13">
+				<a-sphere
+				material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/6.J%C3%BApiter.webp; roughness: 50;"
 
-			animation="property: rotation; to: 0 360 0; dur: 997; easing: linear; loop: true"
-			static-body
-			radius="1.30"
-			shadow="cast: true;"
-			></a-sphere>
-		</a-entity>
-		<a-entity position="153.36 0 0"
-		animation="property: rotation; to: 0 360 0; dur: 28000; easing: linear; loop: true">
-			<a-sphere
-			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/4.Tierra%20Luna.webp; roughness: 50;"
-      
-			animation="property: rotation; to: 0 360 88.3; dur: 28000; easing: linear; loop: true"
-			static-body
-			position="1.75 0 0"
-			rotation="0 180 0"
-			radius="0.35"
-			shadow="cast: true;"
-			></a-sphere>
-		</a-entity>
-	</a-entity>
+				animation="property: rotation; to: 0 360 0; dur: 410; easing: linear; loop: true"
+				static-body
+				radius="14.25"
+				shadow="cast: true;"
+				></a-sphere>
+			</a-entity>
+		</a-entity></a-entity>
 
-	<!-- Marte -->
-	<a-entity rotation="1.85 0 0"><a-entity position="3.29 0 0"
-	animation="property: rotation; to: 0 360 0; dur: 686199; easing: linear; loop: true"
-	animation__2="property: position; to: -3.29 0 0; dur: 343099.5; easing: linear; dir: alternate; loop: true">
-		<a-entity position="157.98 0 0" rotation="0 0 25.19">
-			<a-sphere
-			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/5.Marte.webp; roughness: 50;"
+		<!-- Saturno -->
+		<a-entity rotation="2.489 0 0"><a-entity position="12.04 0 0"
+		animation="property: rotation; to: 0 360 0; dur: 10738300; easing: linear; loop: true"
+		animation__2="property: position; to: -12.04 0 0; dur: 5369150; easing: linear; dir: alternate; loop: true">
+			<a-entity position="246.60 0 0" rotation="0 0 -26.73">
+				<a-sphere
+				material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/7.Saturno.webp; roughness: 50;"
+				
+				animation="property: rotation; to: 0 360 0; dur: 426; easing: linear; loop: true"
+				static-body
+				radius="11.87"
+				shadow="cast: true;"
+				></a-sphere>
+				<a-ring
+				material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/7.Saturno%20Anillo.webp; roughness: 50; opacity: 0.85;"
+				static-body
+				radius-inner="13.66"
+				radius-outer="27.88"
+				position="0 -0.4 0"
+				rotation="90 90 0"
+				shadow="cast: true;"
+				></a-ring>
+				<a-ring
+				material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/7.Saturno%20Anillo.webp; roughness: 50; opacity: 0.85;"
+				static-body
+				radius-inner="13.66"
+				radius-outer="27.88"
+				position="0 0.4 0"
+				rotation="270 90 0"
+				shadow="cast: true;"
+				></a-ring>
+			</a-entity>
+		</a-entity></a-entity>
 
-			animation="property: rotation; to: 0 360 0; dur: 1025; easing: linear; loop: true"
-			static-body
-			radius="0.69"
-			shadow="cast: true;"
-			></a-sphere>
-		</a-entity>
-	</a-entity></a-entity>
+		<!-- Urano -->
+		<a-entity rotation="0.773 0 0"><a-entity position="20.50 0 0"
+		animation="property: rotation; to: 0 360 0; dur: 30568750; easing: linear; loop: true"
+		animation__2="property: position; to: -20.50 0 0; dur: 15284375; easing: linear; dir: alternate; loop: true">
+			<a-entity position="354.61 0 0" rotation="0 0 97.77">
+				<a-sphere
+				material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/8.Urano.webp; roughness: 50;"
 
-	<!-- Jupiter -->
-	<a-entity rotation="1.303 0 0"><a-entity position="5.81 0 0"
-	animation="property: rotation; to: 0 360 0; dur: 4328900; easing: linear; loop: true"
-	animation__2="property: position; to: -5.81 0 0; dur: 2164450; easing: linear; dir: alternate; loop: true">
-		<a-entity position="199.46 0 0" rotation="0 0 3.13">
-			<a-sphere
-			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/6.J%C3%BApiter.webp; roughness: 50;"
+				animation="property: rotation; to: 0 360 0; dur: 716; easing: linear; loop: true"
+				static-body
+				radius="5.17"
+				shadow="cast: true;"
+				></a-sphere>
+				<a-ring
+				material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/8.Urano%20Anillo.webp; roughness: 50; opacity: 0.85;"
+				static-body
+				radius-inner="8.53"
+				radius-outer="20.99"
+				position="0 -0.4 0"
+				rotation="90 90 0"
+				shadow="cast: true;"
+				></a-ring>
+				<a-ring
+				material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/8.Urano%20Anillo.webp; roughness: 50; opacity: 0.85;"
+				static-body
+				radius-inner="8.53"
+				radius-outer="20.99"
+				position="0 0.4 0"
+				rotation="270 90 0"
+				shadow="cast: true;"
+				></a-ring>
+			</a-entity>
+		</a-entity></a-entity>
 
-			animation="property: rotation; to: 0 360 0; dur: 410; easing: linear; loop: true"
-			static-body
-			radius="14.25"
-			shadow="cast: true;"
-			></a-sphere>
-		</a-entity>
-	</a-entity></a-entity>
+		<!-- Neptuno -->
+		<a-entity rotation="1.77 0 0"><a-entity position="6.99 0 0"
+			animation="property: rotation; to: 0 360 0; dur: 59757800; easing: linear; loop: true"
+			animation__2="property: position; to: -6.99 0 0; dur: 29878900; easing: linear; dir: alternate; loop: true">
+			<a-entity position="501 0 0" rotation="0 0 28.32">
+				<a-sphere
+				material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/9.Neptuno.webp; roughness: 50;"
 
-	<!-- Saturno -->
-	<a-entity rotation="2.489 0 0"><a-entity position="12.04 0 0"
-	animation="property: rotation; to: 0 360 0; dur: 10738300; easing: linear; loop: true"
-	animation__2="property: position; to: -12.04 0 0; dur: 5369150; easing: linear; dir: alternate; loop: true">
-		<a-entity position="246.60 0 0" rotation="0 0 -26.73">
-			<a-sphere
-			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/7.Saturno.webp; roughness: 50;"
+				animation="property: rotation; to: 0 360 0; dur: 671000; easing: linear; loop: true"
+				static-body
+				radius="5.02"
+				shadow="cast: true;"
+				></a-sphere>
+			</a-entity>
+		</a-entity></a-entity>
 
-			animation="property: rotation; to: 0 360 0; dur: 426; easing: linear; loop: true"
-			static-body
-			radius="11.87"
-			shadow="cast: true;"
-			></a-sphere>
-			<a-ring
-			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/7.Saturno%20Anillo.webp; roughness: 50; opacity: 0.85;"
-			static-body
-			radius-inner="13.66"
-			radius-outer="27.88"
-			position="0 -0.4 0"
-			rotation="90 90 0"
-			shadow="cast: true;"
-			></a-ring>
-			<a-ring
-			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/7.Saturno%20Anillo.webp; roughness: 50; opacity: 0.85;"
-			static-body
-			radius-inner="13.66"
-			radius-outer="27.88"
-			position="0 0.4 0"
-			rotation="270 90 0"
-			shadow="cast: true;"
-			></a-ring>
-		</a-entity>
-	</a-entity></a-entity>
-
-	<!-- Urano -->
-	<a-entity rotation="0.773 0 0"><a-entity position="20.50 0 0"
-	animation="property: rotation; to: 0 360 0; dur: 30568750; easing: linear; loop: true"
-	animation__2="property: position; to: -20.50 0 0; dur: 15284375; easing: linear; dir: alternate; loop: true">
-		<a-entity position="354.61 0 0" rotation="0 0 97.77">
-			<a-sphere
-			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/8.Urano.webp; roughness: 50;"
-
-			animation="property: rotation; to: 0 360 0; dur: 716; easing: linear; loop: true"
-			static-body
-			radius="5.17"
-			shadow="cast: true;"
-			></a-sphere>
-			<a-ring
-			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/8.Urano%20Anillo.webp; roughness: 50; opacity: 0.85;"
-			static-body
-			radius-inner="8.53"
-			radius-outer="20.99"
-			position="0 -0.4 0"
-			rotation="90 90 0"
-			shadow="cast: true;"
-			></a-ring>
-			<a-ring
-			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/8.Urano%20Anillo.webp; roughness: 50; opacity: 0.85;"
-			static-body
-			radius-inner="8.53"
-			radius-outer="20.99"
-			position="0 0.4 0"
-			rotation="270 90 0"
-			shadow="cast: true;"
-			></a-ring>
-		</a-entity>
-	</a-entity></a-entity>
-
-	<!-- Neptuno -->
-	<a-entity rotation="1.77 0 0"><a-entity position="6.99 0 0"
-	animation="property: rotation; to: 0 360 0; dur: 59757800; easing: linear; loop: true"
-	animation__2="property: position; to: -6.99 0 0; dur: 29878900; easing: linear; dir: alternate; loop: true">
-		<a-entity position="501 0 0" rotation="0 0 28.32">
-			<a-sphere
-			material="src: https://raw.githubusercontent.com/Xaival/WebGL-A-frame/main/Sistema%20solar/Texturas/9.Neptuno.webp; roughness: 50;"
-
-			animation="property: rotation; to: 0 360 0; dur: 671000; easing: linear; loop: true"
-			static-body
-			radius="5.02"
-			shadow="cast: true;"
-			></a-sphere>
-		</a-entity>
-	</a-entity></a-entity>
-
-</a-scene>
-	
+	</a-scene>
 </body>
 </html>
