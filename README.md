@@ -17,3 +17,8 @@ Proyectos de paginas web con A-frame
 |                         |           |              |               |               |            |               |               |                 |           |                 |           |                 |
 | **Tiempo Girar**        |0 Dias     |58,65 Dias    |243,01 Dias    |1,00 Dias      |28,00 Dias  |1,03 Dias      |0,41 Dias      |0,43 Dias        |           |0,72 Dias        |           |671,00 Dias      |
 | **Tiempo Orbital**      |0 Dias     |87,97 Dias    |224,70 Dias    |365,26 Dias    |28,00 Dias  |686,20 Dias    |4328,90 Dias   |10738,30 Dias    |           |30568,75 Dias    |           |59757,80 Dias    |
+
+
+
+## [Importar modelo .glTF](https://xaival.github.io/WebGL-A-frame/Importar%20modelo%20.glTF/)
+![image](https://user-images.githubusercontent.com/54257745/145665639-7214c0d0-c4f4-4123-9aaa-5c6ebd0f29ac.png)
