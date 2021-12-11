@@ -22,3 +22,6 @@ Proyectos de paginas web con A-frame
 
 ## [Importar modelo .glTF](https://xaival.github.io/WebGL-A-frame/Importar%20modelo%20.glTF/)
 ![image](https://user-images.githubusercontent.com/54257745/145665639-7214c0d0-c4f4-4123-9aaa-5c6ebd0f29ac.png)
+
+
+## [Importar modelo .obj](https://xaival.github.io/WebGL-A-frame/Importar%20modelo%20.obj/)
