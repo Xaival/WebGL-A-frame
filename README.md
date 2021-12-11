@@ -25,3 +25,4 @@ Proyectos de paginas web con A-frame
 
 
 ## [Importar modelo .obj](https://xaival.github.io/WebGL-A-frame/Importar%20modelo%20.obj/)
+![image](https://user-images.githubusercontent.com/54257745/145677958-3fc07795-c89a-4779-881e-75cc4b47d117.png)
